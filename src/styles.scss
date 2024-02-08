@@ -1,0 +1,49 @@
+/* You can add global styles to this file, and also import other style files */
+
+@font-face {
+  font-family: 'Spectral';
+  font-weight: 700;
+  src: url("./assets/fonts/google-fonts/Spectral-Bold.ttf");
+}
+@font-face {
+  font-family: 'Spectral';
+  font-weight: 500;
+  src: url("./assets/fonts/google-fonts/Spectral-Medium.ttf");
+}
+
+$color-background: #282c34;
+
+*, body {
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  height: 100%;
+
+  body {
+    height: 100%;
+
+    app-root {
+      height: 100%;
+    }
+  }
+}
+
+
+app-home-page, app-board-page {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  background-color: $color-background;
+}
+
+app-board-page {
+  position: relative;
+}
+
+.container {
+  width: 1200px;
+  margin: 0 auto;
+}

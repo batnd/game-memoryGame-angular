@@ -1,0 +1,100 @@
+.game {
+  padding-top: 50px;
+
+  .container {
+
+    .content {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      row-gap: 15px;
+
+      .content-title {
+        font-family: Spectral, sans-serif;
+        font-weight: 500;
+        color: white;
+        font-size: 48px;
+      }
+
+      .content-clicks {
+        font-family: Spectral, sans-serif;
+        font-weight: 500;
+        color: #79ff75;
+        font-size: 28px;
+      }
+
+      .board {
+        width: 550px;
+        height: 550px;
+        border-radius: 5px;
+        padding: 45px;
+        box-sizing: border-box;
+        background-color: #19202c;
+
+        display: grid;
+        grid-gap: 20px;
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-rows: repeat(4, 1fr);
+      }
+    }
+  }
+}
+
+.popup {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 2;
+  background-color: rgba(28, 28, 28, 0.75);
+
+  div {
+    padding: 20px;
+    width: 350px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #3a81c7;
+    border: 0;
+    border-radius: 5px;
+    position: relative;
+
+    p {
+      color: white;
+      font-family: Spectral, sans-serif;
+      font-weight: 500;
+      text-align: center;
+      font-size: 24px;
+
+      &.result {
+        margin-bottom: 10px;
+      }
+    }
+
+    button {
+      cursor: pointer;
+      width: 110px;
+      height: 35px;
+      background-color: #282c68;
+      border: 0;
+      outline: 0;
+      border-radius: 5px;
+      font-family: Spectral, sans-serif;
+      font-weight: 400;
+      font-size: 18px;
+      color: white;
+      transition: background-color .2s ease-in-out;
+
+      &:hover {
+        background-color: #393e88;
+      }
+
+      &:active {
+        background-color: #454ba4;
+      }
+    }
+  }
+}

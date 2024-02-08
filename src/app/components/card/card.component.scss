@@ -1,0 +1,58 @@
+.card {
+  width: 100px;
+  height: 100px;
+  cursor: pointer;
+  position: relative;
+
+  .card-inner {
+    box-sizing: border-box;
+    background-color: #3a3e4c;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    width: 100%;
+    height: 100%;
+
+
+    transition: all .2s;
+    transform-style: preserve-3d;
+
+
+    &.card-front {
+      background-color: #3a3e4c;
+      position: absolute;
+
+      img {
+        width: 100%;
+        height: 100%;
+      }
+    }
+
+    &.card-back {
+      background-color: #3a3e4c;
+
+      img {
+        width: 50%;
+        height: 50%;
+      }
+    }
+  }
+
+  &.opened .card-front {
+    transform: rotateY(180deg);
+  }
+  &.closed .card-front {
+    transform: rotateY(0deg);
+  }
+
+  &.opened .card-back {
+    transform: rotateY(180deg);
+    opacity: 0;
+  }
+  &.closed .card-back {
+    transform: rotateY(0deg);
+    opacity: 1;
+  }
+}

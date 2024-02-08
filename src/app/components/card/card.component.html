@@ -1,0 +1,8 @@
+<div  class="card {{(cardProps?.isOpened || cardProps?.isCompleted) ? 'opened' : 'closed'}}" (click)="cardClickHandler()">
+  <div class="card-inner card-front">
+    <img src="{{imageUrl}}" alt="{{cardProps?.name}}">
+  </div>
+  <div class="card-inner card-back">
+    <img src="{{imageQuestUrl}}" alt="question mark">
+  </div>
+</div>

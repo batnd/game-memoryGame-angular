@@ -1,0 +1,18 @@
+<div class="game">
+  <div class="container">
+    <div class="content">
+      <p class="content-title">Memory Game</p>
+      <p class="content-clicks">Moves: {{moves}}</p>
+      <div class="board">
+        <app-card-component (cardClickEvent)="cardClickEvent($event)" *ngFor="let card of cards" [card]="card"></app-card-component>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="popup" *ngIf="isAllCardsCompleted">
+  <div>
+    <p>The game is completed!</p>
+    <p class="result">Your result: {{moves}} moves!</p>
+    <button class="button" (click)="restart()">Play again!</button>
+  </div>
+</div>
